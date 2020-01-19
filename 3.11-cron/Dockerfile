@@ -6,7 +6,7 @@ ARG APP_BUILD
 RUN printf "Build of ${APP_BUILD}, date: %s\n" `date -u +"%Y-%m-%dT%H:%M:%SZ"` >> /etc/BUILD && \
     #
     # install base cli tools:
-    apk update && apk upgrade \
+    apk update && apk upgrade && \
     apk add --no-cache logrotate && \
     #
     # prepare config user:
